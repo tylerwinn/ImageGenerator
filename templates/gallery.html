@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+</head>
+<body>
+    <h1>Generated Images</h1>
+    <div>
+        {% for image in images %}
+            <img src="{{ image.url }}" alt="{{ image.id }}" width="256" height="256">
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('index') }}">Create more images</a>
+</body>
+</html>
